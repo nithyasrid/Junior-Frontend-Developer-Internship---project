@@ -11,19 +11,27 @@
 
     <meta
         name="description"
-        content="Accessible portfolio of Nithya Sri, Software Engineer and Data Engineering enthusiast."
+        content="Nithya Sri - Software Engineer, Data Engineer and AI Upskiller portfolio."
     >
 
-    <title>Nithya Sri | Accessible Portfolio</title>
+    <meta
+        name="theme-color"
+        content="#08080c"
+    >
 
+    <title>Nithya Sri | Software Engineer</title>
+
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Skip link helps keyboard and screen-reader users
-         bypass repeated navigation -->
-    <a class="skip-link" href="#main-content">
+    <!-- Skip navigation for accessibility -->
+    <a
+        class="skip-link"
+        href="#main-content"
+    >
         Skip to main content
     </a>
 
@@ -186,11 +194,8 @@
                     <div class="system-content">
 
                         <p>&gt; building systems...</p>
-
                         <p>&gt; processing data...</p>
-
                         <p>&gt; connecting ideas...</p>
-
                         <p>&gt; deploying solutions...</p>
 
                         <p class="success">
@@ -276,7 +281,6 @@
 
 
             <div class="skills-grid">
-
 
                 <article class="skill-card">
 
@@ -397,7 +401,8 @@
 
                     <div
                         class="project-image"
-                        aria-hidden="true"
+                        role="img"
+                        aria-label="ShopFlow project preview"
                     >
                         SHOPFLOW
                     </div>
@@ -426,12 +431,10 @@
                             class="tech-stack"
                             aria-label="Technologies used"
                         >
-
                             <span>Java</span>
                             <span>Kafka</span>
                             <span>Spark</span>
                             <span>BigQuery</span>
-
                         </div>
 
 
@@ -454,7 +457,8 @@
 
                     <div
                         class="project-image"
-                        aria-hidden="true"
+                        role="img"
+                        aria-label="CargoPulse project preview"
                     >
                         CARGOPULSE
                     </div>
@@ -482,12 +486,10 @@
                             class="tech-stack"
                             aria-label="Technologies used"
                         >
-
                             <span>Python</span>
                             <span>Kafka</span>
                             <span>Spark</span>
                             <span>Airflow</span>
-
                         </div>
 
 
@@ -510,7 +512,8 @@
 
                     <div
                         class="project-image"
-                        aria-hidden="true"
+                        role="img"
+                        aria-label="MediTrust project preview"
                     >
                         MEDITRUST
                     </div>
@@ -538,12 +541,10 @@
                             class="tech-stack"
                             aria-label="Technologies used"
                         >
-
                             <span>Python</span>
                             <span>SQL</span>
                             <span>Kafka</span>
                             <span>BigQuery</span>
-
                         </div>
 
 
@@ -566,7 +567,8 @@
 
                     <div
                         class="project-image"
-                        aria-hidden="true"
+                        role="img"
+                        aria-label="FlashScale project preview"
                     >
                         FLASHSCALE
                     </div>
@@ -594,12 +596,10 @@
                             class="tech-stack"
                             aria-label="Technologies used"
                         >
-
                             <span>Java</span>
                             <span>Spring Boot</span>
                             <span>Redis</span>
                             <span>Kafka</span>
-
                         </div>
 
 
@@ -906,8 +906,11 @@
     </footer>
 
 
-
-    <script src="script.js"></script>
+    <!-- defer prevents JavaScript from blocking HTML parsing -->
+    <script
+        src="script.js"
+        defer
+    ></script>
 
 </body>
 
