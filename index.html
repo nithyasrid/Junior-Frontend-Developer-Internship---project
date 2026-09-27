@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta
@@ -12,27 +11,38 @@
 
     <meta
         name="description"
-        content="Nithya Sri - Software Engineer, Data Engineer and AI Upskiller."
+        content="Accessible portfolio of Nithya Sri, Software Engineer and Data Engineering enthusiast."
     >
 
-    <title>Nithya Sri | Software Engineer</title>
+    <title>Nithya Sri | Accessible Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
-
 </head>
 
-
 <body>
+
+    <!-- Skip link helps keyboard and screen-reader users
+         bypass repeated navigation -->
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
 
 
     <!-- ================= HEADER ================= -->
 
     <header class="header">
 
-        <nav class="navbar">
+        <nav
+            class="navbar"
+            aria-label="Primary navigation"
+        >
 
-            <a href="#home" class="logo">
-                NS<span>.</span>
+            <a
+                href="#home"
+                class="logo"
+                aria-label="Nithya Sri home"
+            >
+                NS<span aria-hidden="true">.</span>
             </a>
 
 
@@ -42,8 +52,9 @@
                 type="button"
                 aria-label="Open navigation menu"
                 aria-expanded="false"
+                aria-controls="nav-links"
             >
-                ☰
+                <span aria-hidden="true">☰</span>
             </button>
 
 
@@ -94,7 +105,7 @@
 
     <!-- ================= MAIN ================= -->
 
-    <main>
+    <main id="main-content">
 
 
         <!-- ================= HERO ================= -->
@@ -102,6 +113,7 @@
         <section
             class="hero"
             id="home"
+            aria-labelledby="hero-title"
         >
 
             <div class="hero-content">
@@ -111,7 +123,7 @@
                 </p>
 
 
-                <h1>
+                <h1 id="hero-title">
                     Hi, I'm
                     <span>Nithya Sri.</span>
                 </h1>
@@ -152,16 +164,19 @@
             </div>
 
 
-
-            <!-- Hero visual -->
-
-            <div class="hero-visual">
+            <div
+                class="hero-visual"
+                aria-label="System status illustration"
+            >
 
                 <div class="system-card">
 
                     <div class="card-header">
 
-                        <span class="status-dot"></span>
+                        <span
+                            class="status-dot"
+                            aria-hidden="true"
+                        ></span>
 
                         SYSTEM ONLINE
 
@@ -197,6 +212,7 @@
         <section
             class="about section"
             id="about"
+            aria-labelledby="about-title"
         >
 
             <div class="section-heading">
@@ -206,7 +222,7 @@
                 </p>
 
 
-                <h2>
+                <h2 id="about-title">
                     Engineer by discipline.
                     <span>Builder by curiosity.</span>
                 </h2>
@@ -241,6 +257,7 @@
         <section
             class="skills section"
             id="skills"
+            aria-labelledby="skills-title"
         >
 
             <div class="section-heading">
@@ -250,7 +267,7 @@
                 </p>
 
 
-                <h2>
+                <h2 id="skills-title">
                     Engineering across
                     <span>multiple layers.</span>
                 </h2>
@@ -263,7 +280,10 @@
 
                 <article class="skill-card">
 
-                    <span class="skill-number">
+                    <span
+                        class="skill-number"
+                        aria-hidden="true"
+                    >
                         01
                     </span>
 
@@ -281,7 +301,10 @@
 
                 <article class="skill-card">
 
-                    <span class="skill-number">
+                    <span
+                        class="skill-number"
+                        aria-hidden="true"
+                    >
                         02
                     </span>
 
@@ -299,7 +322,10 @@
 
                 <article class="skill-card">
 
-                    <span class="skill-number">
+                    <span
+                        class="skill-number"
+                        aria-hidden="true"
+                    >
                         03
                     </span>
 
@@ -317,7 +343,10 @@
 
                 <article class="skill-card">
 
-                    <span class="skill-number">
+                    <span
+                        class="skill-number"
+                        aria-hidden="true"
+                    >
                         04
                     </span>
 
@@ -332,7 +361,6 @@
 
                 </article>
 
-
             </div>
 
         </section>
@@ -344,6 +372,7 @@
         <section
             class="projects section"
             id="projects"
+            aria-labelledby="projects-title"
         >
 
             <div class="section-heading">
@@ -353,7 +382,7 @@
                 </p>
 
 
-                <h2>
+                <h2 id="projects-title">
                     Things I've
                     <span>built.</span>
                 </h2>
@@ -361,15 +390,15 @@
             </div>
 
 
-
             <div class="projects-grid">
 
 
-                <!-- SHOPFLOW -->
-
                 <article class="project-card">
 
-                    <div class="project-image">
+                    <div
+                        class="project-image"
+                        aria-hidden="true"
+                    >
                         SHOPFLOW
                     </div>
 
@@ -393,7 +422,10 @@
                         </p>
 
 
-                        <div class="tech-stack">
+                        <div
+                            class="tech-stack"
+                            aria-label="Technologies used"
+                        >
 
                             <span>Java</span>
                             <span>Kafka</span>
@@ -407,6 +439,7 @@
                             class="project-link project-modal-btn"
                             data-project="shopflow"
                             type="button"
+                            aria-label="View details for ShopFlow"
                         >
                             View Project →
                         </button>
@@ -417,11 +450,12 @@
 
 
 
-                <!-- CARGOPULSE -->
-
                 <article class="project-card">
 
-                    <div class="project-image">
+                    <div
+                        class="project-image"
+                        aria-hidden="true"
+                    >
                         CARGOPULSE
                     </div>
 
@@ -444,7 +478,10 @@
                         </p>
 
 
-                        <div class="tech-stack">
+                        <div
+                            class="tech-stack"
+                            aria-label="Technologies used"
+                        >
 
                             <span>Python</span>
                             <span>Kafka</span>
@@ -458,6 +495,7 @@
                             class="project-link project-modal-btn"
                             data-project="cargopulse"
                             type="button"
+                            aria-label="View details for CargoPulse 2.0"
                         >
                             View Project →
                         </button>
@@ -468,11 +506,12 @@
 
 
 
-                <!-- MEDITRUST -->
-
                 <article class="project-card">
 
-                    <div class="project-image">
+                    <div
+                        class="project-image"
+                        aria-hidden="true"
+                    >
                         MEDITRUST
                     </div>
 
@@ -495,7 +534,10 @@
                         </p>
 
 
-                        <div class="tech-stack">
+                        <div
+                            class="tech-stack"
+                            aria-label="Technologies used"
+                        >
 
                             <span>Python</span>
                             <span>SQL</span>
@@ -509,6 +551,7 @@
                             class="project-link project-modal-btn"
                             data-project="meditrust"
                             type="button"
+                            aria-label="View details for MediTrust"
                         >
                             View Project →
                         </button>
@@ -519,11 +562,12 @@
 
 
 
-                <!-- FLASHSCALE -->
-
                 <article class="project-card">
 
-                    <div class="project-image">
+                    <div
+                        class="project-image"
+                        aria-hidden="true"
+                    >
                         FLASHSCALE
                     </div>
 
@@ -546,7 +590,10 @@
                         </p>
 
 
-                        <div class="tech-stack">
+                        <div
+                            class="tech-stack"
+                            aria-label="Technologies used"
+                        >
 
                             <span>Java</span>
                             <span>Spring Boot</span>
@@ -560,6 +607,7 @@
                             class="project-link project-modal-btn"
                             data-project="flashscale"
                             type="button"
+                            aria-label="View details for FlashScale"
                         >
                             View Project →
                         </button>
@@ -567,7 +615,6 @@
                     </div>
 
                 </article>
-
 
             </div>
 
@@ -580,6 +627,7 @@
         <section
             class="experience section"
             id="experience"
+            aria-labelledby="experience-title"
         >
 
             <div class="section-heading">
@@ -589,7 +637,7 @@
                 </p>
 
 
-                <h2>
+                <h2 id="experience-title">
                     Building,
                     <span>learning, evolving.</span>
                 </h2>
@@ -599,12 +647,11 @@
 
             <div class="timeline">
 
-
                 <article class="timeline-item">
 
-                    <span class="timeline-year">
+                    <time class="timeline-year">
                         2026
-                    </span>
+                    </time>
 
 
                     <div>
@@ -624,12 +671,11 @@
                 </article>
 
 
-
                 <article class="timeline-item">
 
-                    <span class="timeline-year">
+                    <time class="timeline-year">
                         2026
-                    </span>
+                    </time>
 
 
                     <div>
@@ -648,12 +694,11 @@
                 </article>
 
 
-
                 <article class="timeline-item">
 
-                    <span class="timeline-year">
+                    <time class="timeline-year">
                         2023–2027
-                    </span>
+                    </time>
 
 
                     <div>
@@ -670,7 +715,6 @@
 
                 </article>
 
-
             </div>
 
         </section>
@@ -682,6 +726,7 @@
         <section
             class="contact section"
             id="contact"
+            aria-labelledby="contact-title"
         >
 
             <div class="contact-content">
@@ -691,7 +736,7 @@
                 </p>
 
 
-                <h2>
+                <h2 id="contact-title">
                     Let's build something
                     <span>meaningful.</span>
                 </h2>
@@ -704,8 +749,9 @@
 
 
                 <a
-                    href="mailto:nithyasridevasenan9706@gmail.com"
+                    href="mailto:your-email@example.com"
                     class="primary-button"
+                    aria-label="Send an email to Nithya Sri"
                 >
                     Let's Talk →
                 </a>
@@ -733,6 +779,7 @@
         <div
             class="modal-overlay"
             id="modal-overlay"
+            aria-hidden="true"
         ></div>
 
 
@@ -744,7 +791,7 @@
                 type="button"
                 aria-label="Close project details"
             >
-                &times;
+                <span aria-hidden="true">&times;</span>
             </button>
 
 
@@ -781,6 +828,7 @@
                     class="primary-button"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Open project GitHub repository"
                 >
                     View GitHub →
                 </a>
@@ -811,8 +859,9 @@
             <a
                 href="#home"
                 class="logo"
+                aria-label="Return to home"
             >
-                NS<span>.</span>
+                NS<span aria-hidden="true">.</span>
             </a>
 
 
@@ -823,12 +872,16 @@
         </div>
 
 
-        <div class="footer-links">
+        <nav
+            class="footer-links"
+            aria-label="Social links"
+        >
 
             <a
                 href="https://github.com/nithyasrid"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit Nithya Sri's GitHub profile"
             >
                 GitHub
             </a>
@@ -838,11 +891,12 @@
                 href="https://www.linkedin.com/in/nithya-sri-d-b94b86281/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit Nithya Sri's LinkedIn profile"
             >
                 LinkedIn
             </a>
 
-        </div>
+        </nav>
 
 
         <p class="copyright">

@@ -9,53 +9,71 @@ const navLinks =
     document.getElementById("nav-links");
 
 
-if (menuToggle && navLinks) {
+if (!menuToggle || !navLinks) {
 
-    menuToggle.addEventListener("click", () => {
+    console.error(
+        "Navigation elements could not be found."
+    );
 
-        const isOpen =
-            navLinks.classList.toggle("active");
+} else {
 
-        menuToggle.setAttribute(
-            "aria-expanded",
-            isOpen
-        );
+    menuToggle.addEventListener(
+        "click",
+        () => {
 
-        menuToggle.setAttribute(
-            "aria-label",
-            isOpen
-                ? "Close navigation menu"
-                : "Open navigation menu"
-        );
+            const isOpen =
+                navLinks.classList.toggle("active");
 
-    });
-
-
-    const navigationLinks =
-        document.querySelectorAll(
-            ".nav-links a"
-        );
-
-
-    navigationLinks.forEach((link) => {
-
-        link.addEventListener("click", () => {
-
-            navLinks.classList.remove("active");
 
             menuToggle.setAttribute(
                 "aria-expanded",
-                "false"
+                String(isOpen)
             );
+
 
             menuToggle.setAttribute(
                 "aria-label",
-                "Open navigation menu"
+                isOpen
+                    ? "Close navigation menu"
+                    : "Open navigation menu"
             );
 
-        });
+        }
+    );
 
-    });
+
+    const navigationLinks =
+        navLinks.querySelectorAll("a");
+
+
+    navigationLinks.forEach(
+        (link) => {
+
+            link.addEventListener(
+                "click",
+                () => {
+
+                    navLinks.classList.remove(
+                        "active"
+                    );
+
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+
+                    menuToggle.setAttribute(
+                        "aria-label",
+                        "Open navigation menu"
+                    );
+
+                }
+            );
+
+        }
+    );
 
 }
 
@@ -122,7 +140,7 @@ const projects = {
         title: "MediTrust",
 
         description:
-            "A healthcare data reliability platform focused on identifying inconsistent records and improving the reliability of data used by healthcare systems.",
+            "A healthcare data reliability platform focused on identifying inconsistent records and improving the reliability of healthcare data.",
 
         technologies: [
             "Python",
@@ -208,10 +226,6 @@ const modalGithub =
 
 
 
-// =========================================
-// FOCUS MANAGEMENT
-// =========================================
-
 let previousFocusedElement = null;
 
 
@@ -274,17 +288,13 @@ function openProjectModal(projectId) {
     project.technologies.forEach(
         (technology) => {
 
-            const technologyElement =
-                document.createElement(
-                    "span"
-                );
+            const element =
+                document.createElement("span");
 
-            technologyElement.textContent =
+            element.textContent =
                 technology;
 
-            modalTech.appendChild(
-                technologyElement
-            );
+            modalTech.appendChild(element);
 
         }
     );
@@ -377,6 +387,18 @@ projectButtons.forEach(
                 const projectId =
                     button.dataset.project;
 
+
+                if (!projectId) {
+
+                    console.error(
+                        "Project ID is missing."
+                    );
+
+                    return;
+
+                }
+
+
                 openProjectModal(
                     projectId
                 );
@@ -390,7 +412,7 @@ projectButtons.forEach(
 
 
 // =========================================
-// CLOSE BUTTON
+// CLOSE BUTTONS
 // =========================================
 
 if (modalClose) {
@@ -425,12 +447,16 @@ if (modalOverlay) {
 
 
 // =========================================
-// ESCAPE KEY
+// KEYBOARD SUPPORT
 // =========================================
 
 document.addEventListener(
     "keydown",
     (event) => {
+
+        /*
+         * Escape closes the modal.
+         */
 
         if (
             event.key === "Escape" &&
@@ -439,6 +465,119 @@ document.addEventListener(
         ) {
 
             closeProjectModal();
+
+        }
+
+    }
+);
+
+
+
+// =========================================
+// CLOSE MOBILE MENU WITH ESCAPE
+// =========================================
+
+document.addEventListener(
+    "keydown",
+    (event) => {
+
+        if (
+            event.key === "Escape" &&
+            navLinks &&
+            navLinks.classList.contains("active")
+        ) {
+
+            navLinks.classList.remove(
+                "active"
+            );
+
+
+            if (menuToggle) {
+
+                menuToggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+
+                menuToggle.setAttribute(
+                    "aria-label",
+                    "Open navigation menu"
+                );
+
+
+                menuToggle.focus();
+
+            }
+
+        }
+
+    }
+);
+
+
+
+// =========================================
+// MODAL FOCUS HANDLING
+// =========================================
+
+document.addEventListener(
+    "keydown",
+    (event) => {
+
+        if (
+            event.key !== "Tab" ||
+            !modal ||
+            !modal.classList.contains("active")
+        ) {
+
+            return;
+
+        }
+
+
+        const focusableElements =
+            modal.querySelectorAll(
+                'a[href], button:not([disabled])'
+            );
+
+
+        if (!focusableElements.length) {
+
+            return;
+
+        }
+
+
+        const firstElement =
+            focusableElements[0];
+
+        const lastElement =
+            focusableElements[
+                focusableElements.length - 1
+            ];
+
+
+        if (
+            event.shiftKey &&
+            document.activeElement === firstElement
+        ) {
+
+            event.preventDefault();
+
+            lastElement.focus();
+
+        }
+
+
+        else if (
+            !event.shiftKey &&
+            document.activeElement === lastElement
+        ) {
+
+            event.preventDefault();
+
+            firstElement.focus();
 
         }
 
