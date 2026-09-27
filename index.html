@@ -4,34 +4,24 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta
         name="description"
-        content="Nithya Sri - Software Engineer, Data Engineer and AI Upskiller portfolio."
+        content="Nithya Sri's Engineering Dashboard showcasing projects, technologies and development progress."
     >
 
-    <meta
-        name="theme-color"
-        content="#08080c"
-    >
+    <meta name="theme-color" content="#08080c">
 
-    <title>Nithya Sri | Software Engineer</title>
+    <title>Nithya Sri | Engineering Dashboard</title>
 
-    <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Skip navigation for accessibility -->
-    <a
-        class="skip-link"
-        href="#main-content"
-    >
+    <!-- Skip navigation for keyboard users -->
+    <a href="#main-content" class="skip-link">
         Skip to main content
     </a>
 
@@ -46,23 +36,23 @@
         >
 
             <a
-                href="#home"
+                href="#dashboard"
                 class="logo"
-                aria-label="Nithya Sri home"
+                aria-label="Nithya Sri dashboard home"
             >
-                NS<span aria-hidden="true">.</span>
+                NS<span>.</span>
             </a>
 
 
             <button
+                type="button"
                 class="menu-toggle"
                 id="menu-toggle"
-                type="button"
                 aria-label="Open navigation menu"
                 aria-expanded="false"
                 aria-controls="nav-links"
             >
-                <span aria-hidden="true">☰</span>
+                ☰
             </button>
 
 
@@ -72,43 +62,28 @@
             >
 
                 <li>
-                    <a href="#home">Home</a>
+                    <a href="#dashboard">
+                        Dashboard
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#about">About</a>
+                    <a href="#projects">
+                        Projects
+                    </a>
                 </li>
 
                 <li>
-                    <a href="#skills">Skills</a>
-                </li>
-
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-
-                <li>
-                    <a href="#experience">Experience</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Contact</a>
+                    <a href="#analytics">
+                        Analytics
+                    </a>
                 </li>
 
             </ul>
 
-
-            <a
-                href="#contact"
-                class="nav-button"
-            >
-                Let's Connect
-            </a>
-
         </nav>
 
     </header>
-
 
 
     <!-- ================= MAIN ================= -->
@@ -116,252 +91,117 @@
     <main id="main-content">
 
 
-        <!-- ================= HERO ================= -->
+        <!-- ================= DASHBOARD ================= -->
 
         <section
-            class="hero"
-            id="home"
-            aria-labelledby="hero-title"
+            class="dashboard section"
+            id="dashboard"
+            aria-labelledby="dashboard-title"
         >
 
-            <div class="hero-content">
+            <div class="dashboard-header">
 
-                <p class="eyebrow">
-                    SOFTWARE ENGINEER • DATA ENGINEER • AI UPSKILLER
-                </p>
+                <div>
 
+                    <p class="eyebrow">
+                        ENGINEERING DASHBOARD
+                    </p>
 
-                <h1 id="hero-title">
-                    Hi, I'm
-                    <span>Nithya Sri.</span>
-                </h1>
+                    <h1 id="dashboard-title">
+                        Building.
+                        <span>Learning.</span>
+                        Evolving.
+                    </h1>
 
+                    <p class="dashboard-description">
+                        A centralized view of my engineering projects,
+                        technologies and development progress.
+                    </p>
 
-                <h2>
-                    I build systems that turn
-                    complex ideas into practical technology.
-                </h2>
-
-
-                <p class="hero-description">
-                    Electronics & Communication Engineering student
-                    exploring software engineering, data engineering,
-                    backend systems and intelligent applications.
-                </p>
+                </div>
 
 
-                <div class="hero-buttons">
+                <div class="status-indicator">
 
-                    <a
-                        href="#projects"
-                        class="primary-button"
-                    >
-                        Explore My Work
-                    </a>
+                    <span
+                        class="status-dot"
+                        aria-hidden="true"
+                    ></span>
 
-
-                    <a
-                        href="#contact"
-                        class="secondary-button"
-                    >
-                        Let's Connect
-                    </a>
+                    SYSTEM ONLINE
 
                 </div>
 
             </div>
 
+
+            <!-- Statistics -->
 
             <div
-                class="hero-visual"
-                aria-label="System status illustration"
+                class="stats-grid"
+                aria-label="Project statistics"
             >
 
-                <div class="system-card">
+                <article class="stat-card">
 
-                    <div class="card-header">
-
-                        <span
-                            class="status-dot"
-                            aria-hidden="true"
-                        ></span>
-
-                        SYSTEM ONLINE
-
-                    </div>
-
-
-                    <div class="system-content">
-
-                        <p>&gt; building systems...</p>
-                        <p>&gt; processing data...</p>
-                        <p>&gt; connecting ideas...</p>
-                        <p>&gt; deploying solutions...</p>
-
-                        <p class="success">
-                            ✓ READY TO BUILD
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ================= ABOUT ================= -->
-
-        <section
-            class="about section"
-            id="about"
-            aria-labelledby="about-title"
-        >
-
-            <div class="section-heading">
-
-                <p class="section-label">
-                    ABOUT ME
-                </p>
-
-
-                <h2 id="about-title">
-                    Engineer by discipline.
-                    <span>Builder by curiosity.</span>
-                </h2>
-
-            </div>
-
-
-            <div class="about-content">
-
-                <p>
-                    I'm an Electronics & Communication Engineering
-                    student exploring the intersection of software
-                    engineering, data engineering and intelligent
-                    systems.
-                </p>
-
-
-                <p>
-                    I enjoy breaking complex problems into smaller
-                    systems and turning those systems into practical,
-                    scalable solutions.
-                </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ================= SKILLS ================= -->
-
-        <section
-            class="skills section"
-            id="skills"
-            aria-labelledby="skills-title"
-        >
-
-            <div class="section-heading">
-
-                <p class="section-label">
-                    WHAT I BUILD
-                </p>
-
-
-                <h2 id="skills-title">
-                    Engineering across
-                    <span>multiple layers.</span>
-                </h2>
-
-            </div>
-
-
-            <div class="skills-grid">
-
-                <article class="skill-card">
-
-                    <span
-                        class="skill-number"
-                        aria-hidden="true"
-                    >
-                        01
+                    <span class="stat-label">
+                        TOTAL PROJECTS
                     </span>
 
-                    <h3>
-                        Backend Systems
-                    </h3>
-
-                    <p>
-                        Java, Spring Boot, REST APIs,
-                        JPA and Hibernate.
-                    </p>
+                    <strong
+                        class="stat-value"
+                        id="total-projects"
+                    >
+                        0
+                    </strong>
 
                 </article>
 
 
-                <article class="skill-card">
+                <article class="stat-card">
 
-                    <span
-                        class="skill-number"
-                        aria-hidden="true"
-                    >
-                        02
+                    <span class="stat-label">
+                        COMPLETED
                     </span>
 
-                    <h3>
-                        Data Platforms
-                    </h3>
-
-                    <p>
-                        Python, SQL, Spark, Kafka,
-                        Airflow and BigQuery.
-                    </p>
+                    <strong
+                        class="stat-value"
+                        id="completed-projects"
+                    >
+                        0
+                    </strong>
 
                 </article>
 
 
-                <article class="skill-card">
+                <article class="stat-card">
 
-                    <span
-                        class="skill-number"
-                        aria-hidden="true"
-                    >
-                        03
+                    <span class="stat-label">
+                        ACTIVE
                     </span>
 
-                    <h3>
-                        Distributed Systems
-                    </h3>
-
-                    <p>
-                        Event-driven architecture,
-                        scalability and asynchronous systems.
-                    </p>
+                    <strong
+                        class="stat-value"
+                        id="active-projects"
+                    >
+                        0
+                    </strong>
 
                 </article>
 
 
-                <article class="skill-card">
+                <article class="stat-card">
 
-                    <span
-                        class="skill-number"
-                        aria-hidden="true"
-                    >
-                        04
+                    <span class="stat-label">
+                        TECHNOLOGIES
                     </span>
 
-                    <h3>
-                        AI Systems
-                    </h3>
-
-                    <p>
-                        LLM applications, RAG,
-                        Agentic AI and intelligent systems.
-                    </p>
+                    <strong
+                        class="stat-value"
+                        id="total-technologies"
+                    >
+                        0
+                    </strong>
 
                 </article>
 
@@ -381,240 +221,125 @@
 
             <div class="section-heading">
 
-                <p class="section-label">
-                    SELECTED WORK
+                <div>
+
+                    <p class="section-label">
+                        PROJECT MANAGEMENT
+                    </p>
+
+                    <h2 id="projects-title">
+                        Engineering
+                        <span>Projects.</span>
+                    </h2>
+
+                </div>
+
+
+                <p
+                    class="project-count"
+                    id="project-count"
+                    aria-live="polite"
+                >
+                    Loading projects...
                 </p>
-
-
-                <h2 id="projects-title">
-                    Things I've
-                    <span>built.</span>
-                </h2>
 
             </div>
 
 
-            <div class="projects-grid">
+            <!-- Controls -->
 
+            <div
+                class="controls"
+                aria-label="Project filters and sorting"
+            >
 
-                <article class="project-card">
+                <div
+                    class="filter-group"
+                    role="group"
+                    aria-label="Filter projects by category"
+                >
 
-                    <div
-                        class="project-image"
-                        role="img"
-                        aria-label="ShopFlow project preview"
+                    <button
+                        type="button"
+                        class="filter-button active"
+                        data-filter="all"
+                        aria-pressed="true"
                     >
-                        SHOPFLOW
-                    </div>
+                        All
+                    </button>
 
 
-                    <div class="project-content">
-
-                        <p class="project-category">
-                            DATA ENGINEERING
-                        </p>
-
-
-                        <h3>
-                            ShopFlow
-                        </h3>
-
-
-                        <p>
-                            Intelligent e-commerce data platform
-                            designed for real-time and batch
-                            data processing.
-                        </p>
-
-
-                        <div
-                            class="tech-stack"
-                            aria-label="Technologies used"
-                        >
-                            <span>Java</span>
-                            <span>Kafka</span>
-                            <span>Spark</span>
-                            <span>BigQuery</span>
-                        </div>
-
-
-                        <button
-                            class="project-link project-modal-btn"
-                            data-project="shopflow"
-                            type="button"
-                            aria-label="View details for ShopFlow"
-                        >
-                            View Project →
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-
-                <article class="project-card">
-
-                    <div
-                        class="project-image"
-                        role="img"
-                        aria-label="CargoPulse project preview"
+                    <button
+                        type="button"
+                        class="filter-button"
+                        data-filter="Data Engineering"
+                        aria-pressed="false"
                     >
-                        CARGOPULSE
-                    </div>
+                        Data Engineering
+                    </button>
 
 
-                    <div class="project-content">
-
-                        <p class="project-category">
-                            DATA ENGINEERING
-                        </p>
-
-
-                        <h3>
-                            CargoPulse 2.0
-                        </h3>
-
-
-                        <p>
-                            Supply-chain intelligence platform
-                            processing shipment and inventory events.
-                        </p>
-
-
-                        <div
-                            class="tech-stack"
-                            aria-label="Technologies used"
-                        >
-                            <span>Python</span>
-                            <span>Kafka</span>
-                            <span>Spark</span>
-                            <span>Airflow</span>
-                        </div>
-
-
-                        <button
-                            class="project-link project-modal-btn"
-                            data-project="cargopulse"
-                            type="button"
-                            aria-label="View details for CargoPulse 2.0"
-                        >
-                            View Project →
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-
-                <article class="project-card">
-
-                    <div
-                        class="project-image"
-                        role="img"
-                        aria-label="MediTrust project preview"
+                    <button
+                        type="button"
+                        class="filter-button"
+                        data-filter="Backend"
+                        aria-pressed="false"
                     >
-                        MEDITRUST
-                    </div>
+                        Backend
+                    </button>
 
 
-                    <div class="project-content">
-
-                        <p class="project-category">
-                            DATA RELIABILITY
-                        </p>
-
-
-                        <h3>
-                            MediTrust
-                        </h3>
-
-
-                        <p>
-                            Healthcare data reliability platform
-                            designed to identify inconsistent records.
-                        </p>
-
-
-                        <div
-                            class="tech-stack"
-                            aria-label="Technologies used"
-                        >
-                            <span>Python</span>
-                            <span>SQL</span>
-                            <span>Kafka</span>
-                            <span>BigQuery</span>
-                        </div>
-
-
-                        <button
-                            class="project-link project-modal-btn"
-                            data-project="meditrust"
-                            type="button"
-                            aria-label="View details for MediTrust"
-                        >
-                            View Project →
-                        </button>
-
-                    </div>
-
-                </article>
-
-
-
-                <article class="project-card">
-
-                    <div
-                        class="project-image"
-                        role="img"
-                        aria-label="FlashScale project preview"
+                    <button
+                        type="button"
+                        class="filter-button"
+                        data-filter="AI"
+                        aria-pressed="false"
                     >
-                        FLASHSCALE
-                    </div>
+                        AI
+                    </button>
+
+                </div>
 
 
-                    <div class="project-content">
+                <label
+                    class="sort-control"
+                    for="sort-select"
+                >
 
-                        <p class="project-category">
-                            DISTRIBUTED SYSTEMS
-                        </p>
+                    Sort:
+
+                    <select id="sort-select">
+
+                        <option value="name">
+                            Project Name
+                        </option>
+
+                        <option value="status">
+                            Status
+                        </option>
+
+                        <option value="year">
+                            Year
+                        </option>
+
+                    </select>
+
+                </label>
+
+            </div>
 
 
-                        <h3>
-                            FlashScale
-                        </h3>
+            <!-- Dynamic project area -->
 
+            <div
+                class="projects-grid"
+                id="projects-container"
+                aria-live="polite"
+            >
 
-                        <p>
-                            High-concurrency flash-sale platform
-                            designed for reliable inventory reservation.
-                        </p>
-
-
-                        <div
-                            class="tech-stack"
-                            aria-label="Technologies used"
-                        >
-                            <span>Java</span>
-                            <span>Spring Boot</span>
-                            <span>Redis</span>
-                            <span>Kafka</span>
-                        </div>
-
-
-                        <button
-                            class="project-link project-modal-btn"
-                            data-project="flashscale"
-                            type="button"
-                            aria-label="View details for FlashScale"
-                        >
-                            View Project →
-                        </button>
-
-                    </div>
-
-                </article>
+                <p class="loading-message">
+                    Loading projects...
+                </p>
 
             </div>
 
@@ -622,94 +347,118 @@
 
 
 
-        <!-- ================= EXPERIENCE ================= -->
+        <!-- ================= ANALYTICS ================= -->
 
         <section
-            class="experience section"
-            id="experience"
-            aria-labelledby="experience-title"
+            class="analytics section"
+            id="analytics"
+            aria-labelledby="analytics-title"
         >
 
             <div class="section-heading">
 
                 <p class="section-label">
-                    JOURNEY
+                    TECHNOLOGY ANALYTICS
                 </p>
 
-
-                <h2 id="experience-title">
-                    Building,
-                    <span>learning, evolving.</span>
+                <h2 id="analytics-title">
+                    My technology
+                    <span>stack.</span>
                 </h2>
 
             </div>
 
 
-            <div class="timeline">
+            <div class="analytics-grid">
 
-                <article class="timeline-item">
+                <!-- Technology chart -->
 
-                    <time class="timeline-year">
-                        2026
-                    </time>
+                <article class="analytics-card">
+
+                    <h3>
+                        Technology Usage
+                    </h3>
+
+                    <p>
+                        Technologies used across the project portfolio.
+                    </p>
 
 
-                    <div>
-
-                        <h3>
-                            Junior Frontend Developer Intern
-                        </h3>
-
-                        <p>
-                            Practical experience in responsive
-                            frontend development using HTML,
-                            CSS and JavaScript.
-                        </p>
-
+                    <div
+                        class="chart"
+                        id="technology-chart"
+                        aria-label="Technology usage chart"
+                    >
                     </div>
 
                 </article>
 
 
-                <article class="timeline-item">
+                <!-- Status chart -->
 
-                    <time class="timeline-year">
-                        2026
-                    </time>
+                <article class="analytics-card">
 
+                    <h3>
+                        Project Status
+                    </h3>
 
-                    <div>
-
-                        <h3>
-                            TEDx Speaker
-                        </h3>
-
-                        <p>
-                            Sharing ideas and experiences through
-                            technology, engineering and storytelling.
-                        </p>
-
-                    </div>
-
-                </article>
+                    <p>
+                        Current distribution of project progress.
+                    </p>
 
 
-                <article class="timeline-item">
+                    <div class="status-chart">
 
-                    <time class="timeline-year">
-                        2023–2027
-                    </time>
+                        <div class="status-row">
+
+                            <div class="status-row-header">
+
+                                <span>
+                                    Completed
+                                </span>
+
+                                <strong id="completed-percent">
+                                    0%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress-track">
+
+                                <div
+                                    class="progress-bar completed-bar"
+                                    id="completed-bar"
+                                ></div>
+
+                            </div>
+
+                        </div>
 
 
-                    <div>
+                        <div class="status-row">
 
-                        <h3>
-                            B.E. Electronics & Communication Engineering
-                        </h3>
+                            <div class="status-row-header">
 
-                        <p>
-                            KGiSL Institute of Technology
-                        </p>
+                                <span>
+                                    Active
+                                </span>
+
+                                <strong id="active-percent">
+                                    0%
+                                </strong>
+
+                            </div>
+
+                            <div class="progress-track">
+
+                                <div
+                                    class="progress-bar active-bar"
+                                    id="active-bar"
+                                ></div>
+
+                            </div>
+
+                        </div>
 
                     </div>
 
@@ -721,40 +470,46 @@
 
 
 
-        <!-- ================= CONTACT ================= -->
+        <!-- ================= ABOUT ================= -->
 
         <section
-            class="contact section"
-            id="contact"
-            aria-labelledby="contact-title"
+            class="about section"
+            aria-labelledby="about-title"
         >
 
-            <div class="contact-content">
+            <div class="about-card">
 
-                <p class="section-label">
-                    HAVE AN IDEA?
-                </p>
+                <div>
 
+                    <p class="section-label">
+                        ABOUT THE APPLICATION
+                    </p>
 
-                <h2 id="contact-title">
-                    Let's build something
-                    <span>meaningful.</span>
-                </h2>
+                    <h2 id="about-title">
+                        A small dashboard
+                        built from scratch.
+                    </h2>
 
-
-                <p>
-                    Whether it's a project, collaboration or
-                    interesting engineering problem, let's connect.
-                </p>
+                </div>
 
 
-                <a
-                    href="mailto:your-email@example.com"
-                    class="primary-button"
-                    aria-label="Send an email to Nithya Sri"
-                >
-                    Let's Talk →
-                </a>
+                <div class="about-text">
+
+                    <p>
+                        This mini web application demonstrates
+                        responsive design, dynamic JSON data,
+                        JavaScript DOM manipulation,
+                        accessibility and frontend performance
+                        optimization.
+                    </p>
+
+                    <p>
+                        The dashboard separates data from the
+                        presentation layer, making the application
+                        easier to maintain and extend.
+                    </p>
+
+                </div>
 
             </div>
 
@@ -771,27 +526,25 @@
         id="project-modal"
         role="dialog"
         aria-modal="true"
-        aria-labelledby="modal-title"
-        aria-describedby="modal-description"
         aria-hidden="true"
+        aria-labelledby="modal-title"
     >
 
         <div
             class="modal-overlay"
             id="modal-overlay"
-            aria-hidden="true"
         ></div>
 
 
         <div class="modal-container">
 
             <button
+                type="button"
                 class="modal-close"
                 id="modal-close"
-                type="button"
                 aria-label="Close project details"
             >
-                <span aria-hidden="true">&times;</span>
+                ×
             </button>
 
 
@@ -804,20 +557,20 @@
 
 
             <h2 id="modal-title">
-                Project Title
+                Project
             </h2>
 
 
             <p id="modal-description">
-                Project description will appear here.
+                Project description.
             </p>
 
 
             <div
-                class="modal-tech"
-                id="modal-tech"
-                aria-label="Technologies used"
-            ></div>
+                class="modal-details"
+                id="modal-details"
+            >
+            </div>
 
 
             <div class="modal-actions">
@@ -828,16 +581,15 @@
                     class="primary-button"
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Open project GitHub repository"
                 >
                     View GitHub →
                 </a>
 
 
                 <button
-                    id="modal-close-bottom"
-                    class="secondary-button"
                     type="button"
+                    class="secondary-button"
+                    id="modal-close-button"
                 >
                     Close
                 </button>
@@ -854,34 +606,28 @@
 
     <footer class="footer">
 
-        <div class="footer-brand">
+        <div>
 
             <a
-                href="#home"
+                href="#dashboard"
                 class="logo"
-                aria-label="Return to home"
             >
-                NS<span aria-hidden="true">.</span>
+                NS<span>.</span>
             </a>
 
-
             <p>
-                Engineering ideas into reality.
+                Engineering ideas into practical systems.
             </p>
 
         </div>
 
 
-        <nav
-            class="footer-links"
-            aria-label="Social links"
-        >
+        <div class="footer-links">
 
             <a
                 href="https://github.com/nithyasrid"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Visit Nithya Sri's GitHub profile"
             >
                 GitHub
             </a>
@@ -891,22 +637,21 @@
                 href="https://www.linkedin.com/in/nithya-sri-d-b94b86281/"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Visit Nithya Sri's LinkedIn profile"
             >
                 LinkedIn
             </a>
 
-        </nav>
+        </div>
 
 
         <p class="copyright">
-            © 2026 Nithya Sri. Built with HTML, CSS & JavaScript.
+            © 2026 Nithya Sri
         </p>
 
     </footer>
 
 
-    <!-- defer prevents JavaScript from blocking HTML parsing -->
+    <!-- Deferred JavaScript -->
     <script
         src="script.js"
         defer

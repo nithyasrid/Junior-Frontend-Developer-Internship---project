@@ -1,0 +1,106 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "name": "ShopFlow",
+            "category": "Data Engineering",
+            "status": "Completed",
+            "year": 2026,
+            "description": "An intelligent e-commerce data platform designed for real-time and batch data processing.",
+            "technologies": [
+                "Java",
+                "Spring Boot",
+                "PostgreSQL",
+                "Kafka",
+                "Spark",
+                "Airflow",
+                "BigQuery"
+            ],
+            "github": "https://github.com/nithyasrid"
+        },
+        {
+            "id": 2,
+            "name": "CargoPulse 2.0",
+            "category": "Data Engineering",
+            "status": "Completed",
+            "year": 2026,
+            "description": "A smart supply-chain intelligence platform designed to process shipment, inventory and operational events.",
+            "technologies": [
+                "Python",
+                "SQL",
+                "Kafka",
+                "Spark",
+                "Airflow",
+                "BigQuery",
+                "Docker"
+            ],
+            "github": "https://github.com/nithyasrid"
+        },
+        {
+            "id": 3,
+            "name": "MediTrust",
+            "category": "Data Engineering",
+            "status": "Completed",
+            "year": 2026,
+            "description": "A hospital data reliability platform focused on improving the quality and consistency of healthcare data.",
+            "technologies": [
+                "Python",
+                "SQL",
+                "Kafka",
+                "Spark",
+                "Airflow",
+                "BigQuery"
+            ],
+            "github": "https://github.com/nithyasrid"
+        },
+        {
+            "id": 4,
+            "name": "Journey Recovery AI",
+            "category": "AI",
+            "status": "Active",
+            "year": 2026,
+            "description": "An AI-powered travel disruption assistant designed to help travelers recover from unexpected journey disruptions.",
+            "technologies": [
+                "Python",
+                "FastAPI",
+                "LangGraph",
+                "Kafka",
+                "PostgreSQL",
+                "Docker"
+            ],
+            "github": "https://github.com/nithyasrid"
+        },
+        {
+            "id": 5,
+            "name": "LLM Quality Audit System",
+            "category": "AI",
+            "status": "Active",
+            "year": 2026,
+            "description": "A system for evaluating and auditing the quality of large language model responses.",
+            "technologies": [
+                "Python",
+                "FastAPI",
+                "PostgreSQL",
+                "Streamlit",
+                "Docker"
+            ],
+            "github": "https://github.com/nithyasrid"
+        },
+        {
+            "id": 6,
+            "name": "FlashScale",
+            "category": "Backend",
+            "status": "Completed",
+            "year": 2026,
+            "description": "A high-concurrency backend concept designed around reliable inventory reservation and event processing.",
+            "technologies": [
+                "Java",
+                "Spring Boot",
+                "Kafka",
+                "Redis",
+                "PostgreSQL"
+            ],
+            "github": "https://github.com/nithyasrid"
+        }
+    ]
+}
